@@ -39,5 +39,6 @@ porymap.project.cfg
 *.sym
 *.js
 /.vs
+/.vscode
 /.vs/pokeemerald-expansion/v17
 /.vs/pokeemerald-expansion/FileContentIndex
