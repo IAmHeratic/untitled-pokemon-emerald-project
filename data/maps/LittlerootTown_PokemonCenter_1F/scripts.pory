@@ -8,7 +8,6 @@ script LittlerootTown_PokemonCenter_1F_OnTransition {
     end
 }
 
-# script reusing existing code from pkmn_center_nurse_inc 
 script Littleroot_Town_PokemonCenter_Nurse {
     setvar(VAR_0x800B, 1)
     call(Common_EventScript_PkmnCenterNurse)
