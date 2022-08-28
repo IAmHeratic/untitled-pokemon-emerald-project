@@ -2,6 +2,7 @@
 .set LOCALID_MOM, 4
 .set LOCALID_RIVAL, 7
 .set LOCALID_BIRCH, 8
+.set LOCALID_BEAUTY, 9
 
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
@@ -47,6 +48,7 @@ LittlerootTown_OnTransition:
 	call_if_eq VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4, LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
 	call_if_eq VAR_OLDALE_RIVAL_STATE, 1, LittlerootTown_EventScript_MoveRivalFromOldale
 	call_if_eq VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_EventScript_SetRivalLeftForRoute103
+	call_if_eq VAR_LITTLEROOT_TOWN_STATE, 3, LittlerootTown_EventScript_SetBeautyPos
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_EventScript_HideMapNamePopup
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_EventScript_LeftLabAfterDexUpgrade
 	end
@@ -514,3 +516,31 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
+
+LittlerootTown_EventScript_Beauty::
+	lock
+	faceplayer
+	compare VAR_LITTLEROOT_TOWN_STATE, 3
+	goto_if_eq LittlerootTown_EventScript_Beauty_2
+	msgbox LittlerootTown_EventScript_Beauty_Text_1, MSGBOX_AUTOCLOSE
+LittlerootTown_EventScript_Beauty_1:
+	waitmessage
+	release
+	end
+
+LittlerootTown_EventScript_Beauty_2:
+	msgbox LittlerootTown_EventScript_Beauty_Text_0, MSGBOX_AUTOCLOSE
+	goto LittlerootTown_EventScript_Beauty_1
+
+
+LittlerootTown_EventScript_SetBeautyPos::
+	setobjectxyperm LOCALID_BEAUTY, 4, 17
+	setobjectmovementtype LOCALID_BEAUTY, MOVEMENT_TYPE_FACE_LEFT
+	return
+
+
+LittlerootTown_EventScript_Beauty_Text_0:
+	.string "I wish I had a Bellossom...$"
+
+LittlerootTown_EventScript_Beauty_Text_1:
+	.string "It's closed at the moment.\nCheck back later!$"
