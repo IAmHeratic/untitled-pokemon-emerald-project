@@ -1,0 +1,41 @@
+mapscripts LittlerootTown_PokemonCenter_1F_MapScripts {
+    map_script MAP_SCRIPT_ON_TRANSITION: LittlerootTown_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script LittlerootTown_PokemonCenter_1F_OnTransition {
+    setrespawn(HEAL_LOCATION_LITTLEROOT_TOWN)
+    end
+}
+
+script Littleroot_Town_PokemonCenter_Nurse {
+    setvar(VAR_0x800B, 1)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
+    lock
+}
+
+script Littleroot_Town_PokemonCenter_Beauty {
+    lock
+    faceplayer
+    msgbox("Hi! Do you like my Kecleon?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        msgbox(":)", MSGBOX_NPC)
+        waitmessage
+        release
+        end
+    } else {
+        msgbox("D:", MSGBOX_NPC)
+    }
+}
+
+script Littleroot_Town_PokemonCenter_Kecleon {
+    lock
+    faceplayer
+    msgbox(":)", MSGBOX_AUTOCLOSE)
+    waitmessage
+    release
+    end
+}
