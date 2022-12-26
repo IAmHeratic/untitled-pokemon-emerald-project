@@ -338,7 +338,7 @@
               {
                 "min_level": 3,
                 "max_level": 3,
-                "species": "SPECIES_ZIGZAGOON"
+                "species": "SPECIES_TYMPOLE"
               },
               {
                 "min_level": 4,
@@ -356,9 +356,9 @@
                 "species": "SPECIES_WINGULL"
               },
               {
-                "min_level": 2,
-                "max_level": 2,
-                "species": "SPECIES_WINGULL"
+                "min_level": 4,
+                "max_level": 4,
+                "species": "SPECIES_TYMPOLE"
               },
               {
                 "min_level": 4,
@@ -393,7 +393,7 @@
               {
                 "min_level": 25,
                 "max_level": 30,
-                "species": "SPECIES_PELIPPER"
+                "species": "SPECIES_PALPITOAD"
               }
             ]
           },
@@ -402,7 +402,7 @@
             "mons": [
               {
                 "min_level": 5,
-                "max_level": 10,
+                "max_level": 11,
                 "species": "SPECIES_MAGIKARP"
               },
               {
@@ -438,7 +438,7 @@
               {
                 "min_level": 25,
                 "max_level": 30,
-                "species": "SPECIES_WAILMER"
+                "species": "SPECIES_PALPITOAD"
               },
               {
                 "min_level": 35,
@@ -446,9 +446,9 @@
                 "species": "SPECIES_WAILMER"
               },
               {
-                "min_level": 40,
+                "min_level": 36,
                 "max_level": 45,
-                "species": "SPECIES_WAILMER"
+                "species": "SPECIES_SEISMITOAD"
               }
             ]
           }
