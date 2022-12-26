@@ -1,3 +1,4 @@
+raw `
 .set LOCALID_MART_EMPLOYEE, 2
 .set LOCALID_FOOTPRINTS_MAN, 3
 .set LOCALID_RIVAL, 4
@@ -361,30 +362,33 @@ OldaleTown_Text_CitySign:
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
 
-OldaleTown_EventScript_Wingull::
-	lock
+`
+script OldaleTown_EventScript_Wingull {
+    lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
-	msgbox OldaleTown_Text_Wingull, MSGBOX_DEFAULT
+	playmoncry(SPECIES_WINGULL, CRY_MODE_NORMAL)
+	msgbox (OldaleTown_Text_Wingull, MSGBOX_DEFAULT)
 	waitmoncry
 	release
 	end
+}
 
+text OldaleTown_Text_Wingull{
+    "Wingull: Piii!!!"
+}
 
-OldaleTown_EventScript_Azurill::
-	lock
+script OldaleTown_EventScript_Azurill {
+    lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
-	msgbox OldaleTown_Text_Azurill, MSGBOX_DEFAULT
+	playmoncry(SPECIES_AZURILL, CRY_MODE_NORMAL)
+	msgbox (OldaleTown_Text_Azurill, MSGBOX_DEFAULT)
 	waitmoncry
 	release
 	end
+}
 
-
-OldaleTown_Text_Wingull::
-	.string "Wingull: Piii!!!$"
-
-OldaleTown_Text_Azurill::
-	.string "Azurill: Rooreelooo.$"
+text OldaleTown_Text_Azurill{
+    "Azurill: Rooreelooo."
+}

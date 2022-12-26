@@ -1,7 +1,7 @@
 {
-  "id": "MAP_OLDALE_TOWN_HOUSE1",
-  "name": "OldaleTown_House1",
-  "layout": "LAYOUT_HOUSE1",
+  "id": "MAP_OLDALE_TOWN_HOUSE3",
+  "name": "OldaleTown_House3",
+  "layout": "LAYOUT_OLDALE_TOWN_HOUSE3",
   "music": "MUS_OLDALE",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
@@ -10,38 +10,38 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
-  "show_map_name": false,
+  "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 6,
-      "y": 4,
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 8,
+      "y": 6,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_House1_EventScript_Woman",
+      "script": "OldaleTown_House3_EventScript_Man",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 8,
+      "x": 5,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN",
-      "dest_warp_id": 0
+      "dest_warp_id": 4
     },
     {
-      "x": 4,
-      "y": 8,
+      "x": 6,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN",
-      "dest_warp_id": 0
+      "dest_warp_id": 4
     }
   ],
   "coord_events": [
