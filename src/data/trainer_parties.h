@@ -4406,7 +4406,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Allen[] = {
     },
     {
     .iv = 0,
-    .lvl = 3,
+    .lvl = 4,
     .species = SPECIES_TAILLOW,
     }
 };
@@ -8014,6 +8014,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tiana[] = {
     .iv = 0,
     .lvl = 4,
     .species = SPECIES_SHROOMISH,
+    },
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_WURMPLE,
     }
 };
 
@@ -8168,8 +8173,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Rick[] = {
     },
     {
     .iv = 0,
-    .lvl = 4,
-    .species = SPECIES_WURMPLE,
+    .lvl = 5,
+    .species = SPECIES_FOONGUS,
     }
 };
 
