@@ -1,3 +1,4 @@
+raw `
 Route102_MapScripts::
 	.byte 0
 
@@ -108,16 +109,19 @@ Route102_Text_RouteSignPetalburg:
 	.string "ROUTE 102\n"
 	.string "{LEFT_ARROW} PETALBURG CITY$"
 
-Route102_EventScript_Walter::
-	trainerbattle_single TRAINER_WALTER, Route102_Text_WalterIntro, Route102_Text_WalterDefeated
-	msgbox Route102_Text_WalterPostBattle, MSGBOX_AUTOCLOSE
+`
+
+script Route102_EventScript_Walter {
+    trainerbattle_single (TRAINER_WALTER, Route102_Text_WalterIntro, Route102_Text_WalterDefeated)
+	msgbox (Route102_Text_WalterPostBattle, MSGBOX_AUTOCLOSE)
 	end
+}
 
+script Route102_EventScript_RouteSignCleanUp {
+    msgbox (Route102_Text_RouteSignCleanUp , MSGBOX_AUTOCLOSE)
+    end
+}
 
-Route102_EventScript_RouteSignCleanUp::
-	msgbox Route102_Text_RouteSignCleanUp, MSGBOX_AUTOCLOSE
-	end
-
-
-Route102_Text_RouteSignCleanUp::
-	.string "Please clean up after your POKéMON!$"
+text Route102_Text_RouteSignCleanUp {
+    "Please clean up after your POKéMON!"
+}

@@ -1,3 +1,16 @@
+static const struct TrainerMonNoItemDefaultMoves sParty_Walter[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_TYMPOLE,
+    },
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_WURMPLE,
+    }
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
     {
     .iv = 0,

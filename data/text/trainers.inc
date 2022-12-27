@@ -69,6 +69,16 @@ Route102_Text_TianaPostBattle:
 	.string "To keep winning my way up, I see that\n"
 	.string "I have to catch more POKéMON.$"
 
+Route102_Text_WalterIntro:
+	.string "Check out my epic starter POKéMON!$"
+
+Route102_Text_WalterDefeated:
+	.string "Oof…$"
+
+Route102_Text_WalterPostBattle:
+	.string "Rough start but I'll keep moving\n"
+	.string "forward!$"
+
 Route103_Text_DaisyIntro:
 	.string "Did you feel the tug of our\n"
 	.string "soul-soothing fragrance?$"
